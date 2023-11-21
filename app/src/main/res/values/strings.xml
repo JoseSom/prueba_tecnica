@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">creditcard</string>
+    <string name="card_number">Número de tarjeta</string>
+    <string name="bank_name">Banco</string>
+    <string name="card_holder_title">Titular de la tarjeta</string>
+    <string name="expiration_date_title">Fecha de expiración</string>
+    <string name="cvv_title">CVV</string>
+    <string name="generate_cvv">Generar CVV</string>
+</resources>

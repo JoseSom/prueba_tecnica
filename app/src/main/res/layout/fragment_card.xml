@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".creditcard.ui.CardFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        android:backgroundTint="@color/orange"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/cardNumber"
+                style="@style/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameBank"
+                style="@style/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/firstNumberBlock"
+                style="@style/cardField"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintStart_toStartOf="@+id/cardNumber"
+                app:layout_constraintTop_toBottomOf="@+id/cardNumber"
+                tools:text="5481" />
+
+            <TextView
+                android:id="@+id/secondNumberBlock"
+                style="@style/cardField"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintEnd_toStartOf="@id/thirdNumberBlock"
+                app:layout_constraintStart_toEndOf="@+id/firstNumberBlock"
+                app:layout_constraintTop_toTopOf="@+id/firstNumberBlock"
+                tools:text="5481" />
+
+            <TextView
+                android:id="@+id/thirdNumberBlock"
+                style="@style/cardField"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintEnd_toStartOf="@id/fourthNumberBlock"
+                app:layout_constraintStart_toEndOf="@+id/secondNumberBlock"
+                app:layout_constraintTop_toTopOf="@+id/secondNumberBlock"
+                tools:text="5481" />
+
+            <TextView
+                android:id="@+id/fourthNumberBlock"
+                style="@style/cardField"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/nameBank"
+                app:layout_constraintTop_toTopOf="@+id/thirdNumberBlock"
+                tools:text="5481" />
+
+            <TextView
+                android:id="@+id/cardHolderTitle"
+                style="@style/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/card_holder_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstNumberBlock" />
+
+            <TextView
+                android:id="@+id/cardHolder"
+                style="@style/cardField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolderTitle"
+                tools:text="John Doe the First" />
+
+            <TextView
+                android:id="@+id/expirationDateTitle"
+                style="@style/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:text="@string/expiration_date_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolder" />
+
+            <TextView
+                android:id="@+id/expirationDate"
+                style="@style/cardField"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="@dimen/common_padding_small"
+                android:paddingVertical="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expirationDateTitle"
+                tools:text="03/26" />
+
+            <TextView
+                android:id="@+id/cvvTitle"
+                style="@style/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/cvv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/expirationDateTitle"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolder" />
+
+            <TextView
+                android:id="@+id/cvv"
+                style="@style/cardField"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="@dimen/common_padding_small"
+                android:paddingVertical="@dimen/common_padding_xsmall"
+                android:text="@string/generate_cvv"
+                app:layout_constraintStart_toStartOf="@+id/cvvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/cvvTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_card_movements"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovementsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_movement" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
